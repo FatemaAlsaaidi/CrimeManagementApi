@@ -98,6 +98,12 @@ builder.Services.AddScoped<ISmsService, TwilioSmsService>();
 builder.Services.Configure<EmailSettings>(
     builder.Configuration.GetSection("EmailSettings"));
 
+// =====================================================
+// Load Environment Variables
+//======================================================
+builder.Configuration.AddEnvironmentVariables();
+
+
 // ======================================================
 // 🔹 Caching + Middleware
 // ======================================================
