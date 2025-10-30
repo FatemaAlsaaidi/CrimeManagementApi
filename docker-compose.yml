@@ -9,9 +9,9 @@ services:
     env_file:
       - .env
     environment:
-      POSTGRES_USER: postgres
+      POSTGRES_USER: ${POSTGRES_USER}
       POSTGRES_PASSWORD: ${DB_PASSWORD}
-      POSTGRES_DB: CrimeDB
+      POSTGRES_DB: ${CrimeDB}
     ports:
       - "5433:5432"
     volumes:
